@@ -167,7 +167,7 @@ fn margin_left_right(r: Rect, margin: u16) -> Rect {
     Rect {
         x: r.x + margin,
         y: r.y,
-        width: r.width - 2 * margin,
+        width: r.width.saturating_sub(2 * margin),
         height: r.height,
     }
 }
